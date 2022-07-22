@@ -1,0 +1,26 @@
+.company-list {
+    display: flex;
+    margin-top: 50px;
+        &__item + &__item {
+            margin-left: 30px;
+        }
+    
+        &__link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 170px;
+            height: 92px;
+            border: 1px solid var(--icon-color);
+            border-radius: 4px;
+            fill: var(--icon-color);
+            transition: fill 250ms var(--timing-function),
+                border-color 250ms var(--timing-function);
+        }
+    
+        &__link:hover,
+        &__link:focus {
+            fill: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+}

@@ -1,0 +1,35 @@
+.footer-contact {
+        &__address {
+            color: var(--white-color);
+            text-decoration: none;
+            line-height: 1.71;
+            font-style: normal;
+            transition: color 250ms var(--timing-function);
+        }
+    
+        &__address:hover,
+        &__address:focus {
+            color: var(--accent-color);
+        }
+    
+        &__item {
+            margin-bottom: 9px;
+        }
+    
+        &__item:last-child {
+            margin-bottom: 0;
+        }
+    
+        &__link {
+            color: var(--info-text-color);
+            text-decoration: none;
+            line-height: 1.71;
+            font-style: normal;
+            transition: color 250ms var(--timing-function);
+        }
+    
+        &__link:hover,
+        &__link:focus {
+            color: var(--accent-color);
+        }
+}
