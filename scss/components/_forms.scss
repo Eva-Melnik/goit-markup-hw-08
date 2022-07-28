@@ -1,11 +1,13 @@
-
 .form {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: left;
-    width: 448px;
+    width: 370px;
     padding: 0;
+    @media screen and (min-width: 1200px) {
+        width: 448px;
+    }
 }
 
 .form__title {
@@ -99,6 +101,10 @@
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--text-color);
+    @media screen and (max-width: 1199px) {
+            font-size: 12px;
+            line-height: 1.17;
+    }
 }
 
 .form__checkbox-link {
