@@ -1,5 +1,7 @@
 .footer-social {
     display: flex;
+    justify-content: center;
+    align-items: center;
         &__item + &__item {
             margin-left: 10px;
         }

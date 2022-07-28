@@ -1,0 +1,111 @@
+.menu {
+    @media screen and (max-width: 767px) {
+        position: relative;
+    }
+    &__button {
+        display: none;
+        @media screen and (max-width: 767px) {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 50%;
+            right: 0px;
+            transform: translateY(-50%);
+            padding: 0;
+            margin: 0;
+            border: none;
+            width: 40px;
+            height: 40px;
+            background-color: inherit;
+            border: none;
+            color: var(--primary-text-color);
+            cursor: pointer;
+        }
+    }
+
+    &__backdrop.is-open {
+        @media screen and (max-width: 767px) {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--white-color);
+            z-index: 1;
+        }
+    }
+
+    &__container {    
+        @media screen and (max-width: 767px) {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 480px;
+            height: 100%;
+            padding: 48px 40px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04),
+                0px 2px 4px rgba(0, 0, 0, 0.08),
+                0px 1px 3px rgba(0, 0, 0, 0.16);;
+            z-index: 0;
+        }
+        &.is-open {
+            @media screen and (max-width: 767px) {
+                z-index: 2;
+                display: block;
+                display: flex;
+                justify-content: start;
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+        
+        @media screen and (min-width: 768px) {
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            
+        }
+    }
+
+    &__button-close {
+        display: none;
+        @media screen and (max-width: 767px) {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 10px;
+            right: 15px;
+            padding: 0;
+            margin: 0;
+            width: 40px;
+            height: 40px;
+            background-color: transparent;
+            border: none;
+            color: var(--primary-text-color);
+            cursor: pointer;
+            z-index: 3;
+            transition: color 250ms var(--timing-function);
+        }
+        &:hover,
+        &:focus {
+            fill: var(--accent-color);
+        }
+    }
+    
+    .menu__button-close.is-open .menu__icon-close {
+        opacity: 1;
+    }
+    
+    .menu__icon-close {
+        display: block;
+        opacity: 0;
+        fill: currentColor;
+        transition: opacity 250ms var(--timing-function);
+    }
+}

@@ -1,10 +1,21 @@
 .footer-section-sub {
-    margin-left: auto;
+        @media screen and (min-width: 1200px) {
+            margin-left: auto;
+        }
 }
 
 .subscription {
-    display: flex;
-    align-items: center;
+        @media screen and (max-width: 1199px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         &__input {
             display: flex;
             align-items: center;
@@ -12,13 +23,18 @@
             height: 50px;
             padding: 0;
             padding-left: 16px;
-            margin-right: 12px;
             font-size: 16px;
             line-height: 1.25;
             color: rgba(255, 255, 255, 0.6);
             background-color: transparent;
             border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 4px;
+            @media screen and (max-width: 1199px) { 
+            margin-bottom: 20px;
+            }
+            @media screen and (min-width: 1200px) {
+            margin-right: 12px;
+            }
         }
     
         &__btn {

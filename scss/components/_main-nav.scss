@@ -1,45 +1,63 @@
 .main-nav {
-    display: flex;
-    align-items: center;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+    }
+    
         &__list {
-            display: flex;
             letter-spacing: 0.02em;
+            @media screen and (min-width: 768px) {
+                display: flex;
+            }
         }
-    
-        &__item+&__item {
-            margin-left: 50px;
+
+        &__item + &__item {
+            margin-top: 32px;
+            @media screen and (min-width: 768px) {
+                margin-top: 0;
+                margin-left: 50px;
+            }
         }
-    
-        &__list &__link {
+        
+        &__link {
             position: relative;
             display: block;
-            padding-bottom: 32px;
-            padding-top: 32px;
             color: var(--primary-text-color);
             text-decoration: none;
             font-weight: 500;
             line-height: 1.14;
+            letter-spacing: 0.02em;
             transition: color 250ms var(--timing-function);
+                @media screen and (max-width: 767px){
+                    font-size: 40px;
+                    line-height: 1.175;
+                }
+                @media screen and (min-width: 768px) {
+                    padding: 32px 0;
+                }
         }
     
         &__list &__link:hover,
         &__list &__link:focus {
             color: var(--accent-color);
         }
-    
+
         &__list &__link--current {
             color: var(--accent-color);
         }
-    
+            
         &__link--current::after {
-            position: absolute;
-            left: 0;
-            bottom: -1px;
-            content: '';
-            background-color: var(--accent-color);
-            border-radius: 2px;
-            height: 4px;
-            width: 100%;
+            @media screen and (min-width: 768px) {
+                position: absolute;
+                left: 0;
+                bottom: -1px;
+                content: '';
+                background-color: var(--accent-color);
+                border-radius: 2px;
+                height: 4px;
+                width: 100%;
+            }
         }
+
+    
 }
- 

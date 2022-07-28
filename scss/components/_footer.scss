@@ -11,12 +11,38 @@
 }
 
 .footer-container {
-    display: flex;
-    align-items: baseline;
+    text-align: center;
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            align-items: baseline;
+            text-align: left;
+        }
+    
+        &__item {
+            @media screen and (min-width: 768px) { 
+                display: flex;
+                align-items: baseline; 
+                justify-content: center;
+                margin-bottom: 60px;
+            }
+        }
+}    
+         
+
+.footer-section {
+    margin-bottom: 60px;
+        @media screen and (min-width: 768px) {
+            margin-bottom: 0;
+        }
 }
 
-.footer-section+.footer-section {
-    margin-left: 70px;
+.footer-section + .footer-section {
+    @media screen and (min-width: 768px) {
+        margin-left: 165px;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-left: 70px;
+    }
 }
  
 .footer-title {
