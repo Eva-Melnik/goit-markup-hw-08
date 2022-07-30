@@ -50,18 +50,18 @@ $hero-image-gradient: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.
     }
     }
         &__title {
-            max-width: 696px;
-            margin: auto;
             margin-bottom: 30px;
             color: var(--white-color);
             font-weight: 900;
-            font-size: 44px;
-            line-height: 1.36;
+            font-size: 26px;
+            line-height: 1.615;
             text-transform: uppercase;
             letter-spacing: 0.06em;
-            @media screen and (max-width: 767px) {
-                font-size: 26px;
-                line-height: 1.615;
+            @media screen and (min-width: 1200px) {
+                font-size: 44px;
+                line-height: 1.36;
+                margin: auto;
+                max-width: 696px;
             }
         }
 }
